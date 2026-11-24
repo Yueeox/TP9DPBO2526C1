@@ -8,7 +8,7 @@ $view = new ViewKandidat();
 $presenter = new PresenterKandidat($model, $view);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-<<<<<<< HEAD
+
     // Menangani aksi CRUD berdasarkan nilai $_POST['action'] yang dikirimkan form
     $action = $_POST['action'] ?? '';
     if ($action === 'tambah') {
@@ -34,9 +34,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Mengambil ID kandidat lalu memanggil presenter untuk menghapus data
         $presenter->hapusKandidat((int)($_POST['id'] ?? 0));
     }
-=======
     // TODO: Tangani $_POST['action'] untuk 'tambah', 'ubah', dan 'hapus'
->>>>>>> f8cc07bea232c08923ff7bd1200e7f493dfaefb3
+
     header("Location: index.php");
     exit();
 } else {
